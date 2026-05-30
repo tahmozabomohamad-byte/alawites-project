@@ -1,0 +1,184 @@
+/* تنسيقات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f7f9fa;
+    color: #333;
+}
+
+/* القائمة العلوية */
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c; /* لون أحمر يعبر عن التوثيق الطارئ */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e74c3c;
+}
+
+/* القسم الرئيسي */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* الحاوية والشبكة */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #e74c3c;
+    margin: 10px auto 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* الكروت */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-top: 4px solid #1a1a1a;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-top-color: #e74c3c;
+}
+
+.card-badge {
+    background-color: #fce4e2;
+    color: #e74c3c;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card .date {
+    font-size: 13px;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e74c3c;
+}
+
+/* التذييل */
+footer {
+    background-color: #1a1a1a;
+    color: #7f8c8d;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+.doc-image {
+    width: 100%;         /* تجعل الصورة تأخذ عرض البطاقة بالكامل بشكل متناسق */
+    height: 180px;       /* تحديد ارتفاع مناسب وموحد للصورة */
+    object-fit: cover;   /* قص أطراف الصورة الزائدة بذكاء دون تشويه أبعادها */
+    border-radius: 4px;  /* انحناء خفيف جداً على زوايا الصورة ليتماشى مع التصميم */
+    margin-top: 10px;    /* إعطاء مسافة بسيطة بين الصورة والعنوان الذي فوقها */
+}
+/* تمييز الكروت العاجلة وقضايا الرأي العام */
+.emergency-card {
+    border-right: 5px solid #e74c3c; /* خط أحمر عريض على اليمين ليوحي بالأهمية */
+    background-color: #1e1e1e; /* الحفاظ على اللون الداكن المتناسق مع موقعك */
+}
+
+.highlight-badge {
+    background-color: #e74c3c !important; /* لون أحمر فاقع للعلامة في الأعلى */
+    color: #fff;
+}
